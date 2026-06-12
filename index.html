@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Western Union - Recibo de Transação / Transaction Receipt</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .receipt-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-top: 8px solid #FFCC00; /* Amarelo Western Union */
+        }
+        .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+        .header p {
+            margin: 5px 0 0 0;
+            font-size: 12px;
+            color: #cccccc;
+        }
+        .status-bar {
+            background-color: #e6f4ea;
+            color: #137333;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            border-bottom: 1px solid #ceead6;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #70757a;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f1f3f4;
+            padding-bottom: 5px;
+            font-weight: 600;
+        }
+        .info-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .info-label {
+            color: #5f6368;
+        }
+        .info-value {
+            font-weight: 500;
+            color: #202124;
+            text-align: right;
+        }
+        .mtcn-box {
+            background-color: #f8f9fa;
+            border: 2px dashed #FFCC00;
+            border-radius: 6px;
+            text-align: center;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .mtcn-label {
+            font-size: 12px;
+            color: #5f6368;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .mtcn-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-top: 5px;
+        }
+        .total-row {
+            border-top: 2px solid #1a1a1a;
+            padding-top: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            font-size: 11px;
+            color: #70757a;
+            border-top: 1px solid #ededed;
+        }
+    </style>
+</head>
+<body>
 
+<div class="receipt-container">
+    <div class="header">
+        <h1>WESTERN UNION</h1>
+        <p>International Money Transfer</p>
+    </div>
+    
+    <div class="status-bar">
+        ✓ Disponível para retirada / Ready for pickup
+    </div>
+
+    <div class="content">
+        <div class="info-group">
+            <span class="info-label">Data da transação / Date</span>
+            <span class="info-value">09 Jun 2026 - 18:30 (GMT-3)</span>
+        </div>
+        
+        <div class="mtcn-box">
+            <div class="mtcn-label">Número de Controle (MTCN)</div>
+            <div class="mtcn-number">724 - 891 - 3065</div>
+        </div>
+
+        <div class="section-title">Remetente / Sender</div>
+        <div class="info-group">
+            <span class="info-label">Nome / Name</span>
+            <span class="info-value">LAWANI ACHARAF DINE</span>
+        </div>
+        <div class="info-group">
+            <span class="info-label">Telefone / Phone</span>
+            <span class="info-value">+55 71 9185 5938</span>
+        </div>
+        <div class="info-group">
+            <span class="info-label">Origem / Origin</span>
+            <span class="info-value">Bahia, Brasil (BR)</span>
+        </div>
+
+        <div class="section-title" style="margin-top: 20px;">Beneficiário / Receiver</div>
+        <div class="info-group">
+            <span class="info-label">Nome / Name</span>
+            <span class="info-value">ATINDEHOU Sandra Omon-Houmi</span>
+        </div>
+        <div class="info-group">
+            <span class="info-label">Telefone / Phone</span>
+            <span class="info-value">+229 01 92 96 17 51</span>
+        </div>
+        <div class="info-group">
+            <span class="info-label">Destino / Destination</span>
+            <span class="info-value">Ouidah, Benin (BJ)</span>
+        </div>
+
+        <div class="section-title" style="margin-top: 20px;">Detalhes Financeiros / Financial Details</div>
+        <div class="info-group">
+            <span class="info-label">Quantia enviada / Sent amount</span>
+            <span class="info-value">415,00 BRL</span>
+        </div>
+        <div class="info-group">
+            <span class="info-label">Taxa de envio / Transfer fee</span>
+            <span class="info-value">12,50 BRL</span>
+        </div>
+        <div class="info-group">
+            <span class="info-label">Imposto governamental / Tax (IOF)</span>
+            <span class="info-value">1,60 BRL</span>
+        </div>
+        <div class="info-group total-row">
+            <span class="info-label" style="color: #1a1a1a;">Total pago / Total paid</span>
+            <span class="info-value" style="color: #1a1a1a;">429,10 BRL</span>
+        </div>
+        
+        <div class="info-group" style="margin-top: 15px; background: #fffde7; padding: 8px; border-radius: 4px;">
+            <span class="info-label">Taxa de câmbio / Exchange rate</span>
+            <span class="info-value">1 BRL = 106,024 XOF</span>
+        </div>
+        <div class="info-group" style="font-size: 16px; font-weight: bold; margin-top: 5px;">
+            <span class="info-label" style="color: #137333;">Valor a receber / To receive</span>
+            <span class="info-value" style="color: #137333;">44 000 FCFA</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        Obrigado por usar a Western Union. Thank you for using Western Union. Para suporte ou acompanhamento, guarde este documento junto com um documento de identidade válido.
+    </div>
+</div>
+
+</body>
+</html>
